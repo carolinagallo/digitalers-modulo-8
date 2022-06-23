@@ -1,0 +1,68 @@
+.contain {
+  color: white;
+  text-align: center;
+  font-size: 25px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  display: grid;
+  grid-template-rows: 50px 300px 150px 150px 50px;
+  grid-template-areas:
+    "header menu menu menu"
+    "hero hero hero hero"
+    "main main . image"
+    "main main . extra"
+    "banner banner banner banner";
+}
+.header {
+  grid-area: header;
+  background-color: rgb(10, 10, 39);
+}
+.menu {
+  grid-area: menu;
+  background-color: rgb(209, 69, 69);
+}
+.hero {
+  grid-area: hero;
+  background-color: rgb(98, 174, 240);
+}
+.main {
+  grid-area: main;
+  background-color: rgb(17, 53, 83);
+}
+.image {
+  grid-area: image;
+  background-color: rgb(153, 252, 202);
+}
+.extra {
+  grid-area: extra;
+  background-color: rgb(25, 160, 86);
+}
+.banner {
+  grid-area: banner;
+  background-color: rgb(247, 210, 91);
+}
+
+@media (max-width: 768px) {
+  .contain {
+    grid-template-rows: 50px 250px 250px 100px 100px;
+    grid-template-areas:
+      "header header header header"
+      "hero hero hero hero"
+      "menu main main main"
+      "menu banner banner banner"
+      "menu extra extra  image ";
+  }
+}
+
+@media (max-width: 480px) {
+  .contain {
+    grid-template-rows: repeat(7, 400px);
+    grid-template-areas:
+      "header "
+      "hero "
+      "menu "
+      "main"
+      "banner"
+      "extra "
+      "image ";
+  }
+}
